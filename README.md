@@ -3,9 +3,9 @@
 > Visualize your project workflow with beautiful ASCII box diagrams
 
 [![Claude Code Plugin](https://img.shields.io/badge/Claude%20Code-Plugin-blue)](https://claude.ai/claude-code)
-[![Version](https://img.shields.io/badge/version-1.0.0-green)](https://github.com/aiunlock/step-box)
+[![Version](https://img.shields.io/badge/version-1.0.0-green)](https://github.com/aiunlocked1412/step-box)
 [![License](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
-[![GitHub Actions](https://github.com/aiunlock/step-box/workflows/Validate%20Plugin/badge.svg)](https://github.com/aiunlock/step-box/actions)
+[![GitHub Actions](https://github.com/aiunlocked1412/step-box/workflows/Validate%20Plugin/badge.svg)](https://github.com/aiunlocked1412/step-box/actions)
 
 ## Overview
 

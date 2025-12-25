@@ -34,5 +34,5 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 |---------|------|-------------|
 | 1.0.0 | 2025-12-25 | Initial release |
 
-[Unreleased]: https://github.com/aiunlock/step-box/compare/v1.0.0...HEAD
-[1.0.0]: https://github.com/aiunlock/step-box/releases/tag/v1.0.0
+[Unreleased]: https://github.com/aiunlocked1412/step-box/compare/v1.0.0...HEAD
+[1.0.0]: https://github.com/aiunlocked1412/step-box/releases/tag/v1.0.0

@@ -10,7 +10,7 @@ By participating in this project, you agree to maintain a respectful and inclusi
 
 ### Reporting Bugs
 
-1. Check if the bug has already been reported in [Issues](https://github.com/aiunlock/step-box/issues)
+1. Check if the bug has already been reported in [Issues](https://github.com/aiunlocked1412/step-box/issues)
 2. If not, create a new issue with:
    - Clear title describing the bug
    - Steps to reproduce
@@ -61,7 +61,7 @@ We follow [Conventional Commits](https://www.conventionalcommits.org/):
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/aiunlock/step-box.git
+   git clone https://github.com/aiunlocked1412/step-box.git
    cd step-box
    ```
 
