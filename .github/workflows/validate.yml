@@ -1,0 +1,94 @@
+name: Validate Plugin
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Validate package.json
+        run: |
+          echo "Validating package.json..."
+          node -e "
+            const pkg = require('./package.json');
+
+            // Check required fields
+            const required = ['name', 'version', 'description', 'author', 'license', 'claudeCode'];
+            const missing = required.filter(f => !pkg[f]);
+            if (missing.length) {
+              console.error('Missing required fields:', missing.join(', '));
+              process.exit(1);
+            }
+
+            // Validate claudeCode section
+            if (!pkg.claudeCode.skills || !Array.isArray(pkg.claudeCode.skills)) {
+              console.error('claudeCode.skills must be an array');
+              process.exit(1);
+            }
+
+            // Check each skill has required fields
+            for (const skill of pkg.claudeCode.skills) {
+              if (!skill.name || !skill.file) {
+                console.error('Each skill must have name and file:', skill);
+                process.exit(1);
+              }
+            }
+
+            console.log('✅ package.json is valid');
+          "
+
+      - name: Validate skill files exist
+        run: |
+          echo "Checking skill files..."
+          node -e "
+            const fs = require('fs');
+            const pkg = require('./package.json');
+
+            for (const skill of pkg.claudeCode.skills) {
+              if (!fs.existsSync(skill.file)) {
+                console.error('Skill file not found:', skill.file);
+                process.exit(1);
+              }
+              console.log('✅ Found:', skill.file);
+            }
+          "
+
+      - name: Check README exists
+        run: |
+          if [ ! -f "README.md" ]; then
+            echo "Warning: README.md not found"
+            exit 1
+          fi
+          echo "✅ README.md exists"
+
+      - name: Check LICENSE exists
+        run: |
+          if [ ! -f "LICENSE" ]; then
+            echo "Warning: LICENSE not found"
+            exit 1
+          fi
+          echo "✅ LICENSE exists"
+
+      - name: Validation complete
+        run: |
+          echo ""
+          echo "========================================="
+          echo "✅ Plugin validation passed!"
+          echo "========================================="
+          echo ""
+          echo "Plugin: $(node -p "require('./package.json').displayName")"
+          echo "Version: $(node -p "require('./package.json').version")"
+          echo "Skills:"
+          node -e "require('./package.json').claudeCode.skills.forEach(s => console.log('  - /' + s.name))"

@@ -1,0 +1,43 @@
+{
+  "name": "step-box",
+  "displayName": "Step Box",
+  "version": "1.0.0",
+  "description": "Analyze and visualize project workflow steps in ASCII box format",
+  "author": "Anthropic",
+  "license": "MIT",
+  "keywords": [
+    "claude-code-plugin",
+    "claude-code",
+    "workflow",
+    "visualization",
+    "ascii",
+    "documentation",
+    "diagram",
+    "flowchart"
+  ],
+  "homepage": "https://github.com/anthropics/step-box#readme",
+  "bugs": {
+    "url": "https://github.com/anthropics/step-box/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anthropics/step-box.git"
+  },
+  "claudeCode": {
+    "skills": [
+      {
+        "name": "step",
+        "description": "Analyze project and generate workflow steps visualization in ASCII box format",
+        "file": "skills/step.md"
+      },
+      {
+        "name": "step-update",
+        "description": "Update existing workflow steps documentation",
+        "file": "skills/step-update.md"
+      }
+    ]
+  },
+  "engines": {
+    "claude-code": ">=1.0.0"
+  }
+}
