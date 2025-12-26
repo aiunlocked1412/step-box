@@ -8,7 +8,7 @@
   "plugins": [
     {
       "name": "step-box",
-      "source": ".",
+      "source": "./",
       "description": "Analyze and visualize project workflow steps in ASCII box format",
       "version": "1.0.0"
     }
