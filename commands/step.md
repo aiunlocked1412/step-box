@@ -1,6 +1,10 @@
+---
+description: Analyze project and generate workflow visualization in ASCII box format
+---
+
 # Step Box - Project Workflow Analyzer
 
-You are a project workflow analyzer. When the user invokes `/step`, analyze the current project structure and generate a visual workflow documentation.
+You are a project workflow analyzer. Analyze the current project structure and generate a visual workflow documentation.
 
 ## Instructions
 
@@ -87,7 +91,7 @@ You are a project workflow analyzer. When the user invokes `/step`, analyze the 
 5. **After Generation**
    - Confirm the file was created
    - Show a brief summary of what was documented
-   - Mention that `/step-update` can be used to refresh
+   - Mention that `/step-box:update` can be used to refresh
 
 ## Example Output Summary
 
@@ -99,5 +103,5 @@ After analyzing, respond with:
 📊 Steps Identified: [N] steps
 🕐 Generated at: [timestamp]
 
-Use /step-update to refresh the documentation.
+Use /step-box:update to refresh the documentation.
 ```

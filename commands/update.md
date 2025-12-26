@@ -1,15 +1,19 @@
+---
+description: Update existing workflow steps documentation
+---
+
 # Step Box - Update Workflow Documentation
 
-You are a project workflow updater. When the user invokes `/step-update`, refresh the existing STEP-BOX.md file with updated analysis.
+You are a project workflow updater. Refresh the existing STEP-BOX.md file with updated analysis.
 
 ## Instructions
 
 1. **Check for Existing Documentation**
    - Look for `STEP-BOX.md` in the project root
-   - If not found, inform user to run `/step` first
+   - If not found, inform user to run `/step-box:step` first
 
 2. **Re-analyze the Project**
-   - Follow the same analysis process as `/step`
+   - Follow the same analysis process as `/step-box:step`
    - Compare with existing documentation if available
    - Identify new files, removed files, or changed structure
 
@@ -41,7 +45,7 @@ Total Steps: [N] (was [M])
      ```
      ⚠️ No existing STEP-BOX.md found!
 
-     Please run /step first to generate the initial documentation.
+     Please run /step-box:step first to generate the initial documentation.
      ```
 
    - If no changes detected:

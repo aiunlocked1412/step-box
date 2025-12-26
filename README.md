@@ -21,20 +21,31 @@
 
 ## Installation
 
-Install via Claude Code Plugin Marketplace:
+### Method 1: Add Marketplace & Install
 
 ```bash
-claude plugin install step-box
+# Add the marketplace
+/plugin marketplace add aiunlocked1412/step-box
+
+# Install the plugin
+/plugin install step-box@aiunlocked1412
 ```
 
-Or add to your `.claude/plugins.json`:
+### Method 2: Direct Install from GitHub
 
-```json
-{
-  "plugins": [
-    "step-box"
-  ]
-}
+```bash
+/plugin marketplace add https://github.com/aiunlocked1412/step-box.git
+/plugin install step-box
+```
+
+### Method 3: Local Development
+
+```bash
+# Clone the repository
+git clone https://github.com/aiunlocked1412/step-box.git
+
+# Test locally
+claude --plugin-dir ./step-box
 ```
 
 ## Usage
@@ -42,7 +53,7 @@ Or add to your `.claude/plugins.json`:
 ### Generate Workflow Documentation
 
 ```
-/step
+/step-box:step
 ```
 
 This will analyze your project and create a `STEP-BOX.md` file with:
@@ -54,7 +65,7 @@ This will analyze your project and create a `STEP-BOX.md` file with:
 ### Update Documentation
 
 ```
-/step-update
+/step-box:update
 ```
 
 Refresh the existing documentation to reflect any changes in your project.
@@ -89,6 +100,13 @@ Refresh the existing documentation to reflect any changes in your project.
                            (...)
 ```
 
+## Commands Reference
+
+| Command | Description |
+|---------|-------------|
+| `/step-box:step` | Generate new workflow documentation |
+| `/step-box:update` | Update existing documentation |
+
 ## Customization
 
 Add custom sections that won't be overwritten during updates:
@@ -96,7 +114,7 @@ Add custom sections that won't be overwritten during updates:
 ```markdown
 <!-- CUSTOM START -->
 ## My Custom Notes
-This section will be preserved when running /step-update
+This section will be preserved when running /step-box:update
 <!-- CUSTOM END -->
 ```
 
@@ -110,6 +128,20 @@ This section will be preserved when running /step-update
 - Ruby
 - PHP
 - And more...
+
+## Plugin Structure
+
+```
+step-box/
+├── .claude-plugin/
+│   └── plugin.json       # Plugin manifest
+├── commands/
+│   ├── step.md           # /step-box:step command
+│   └── update.md         # /step-box:update command
+├── README.md
+├── LICENSE
+└── CHANGELOG.md
+```
 
 ## Contributing
 

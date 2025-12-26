@@ -1,0 +1,18 @@
+{
+  "name": "step-box",
+  "version": "1.0.0",
+  "description": "Analyze and visualize project workflow steps in ASCII box format",
+  "author": {
+    "name": "AI UNLOCKED",
+    "url": "https://aiunlock.co"
+  },
+  "repository": "https://github.com/aiunlocked1412/step-box",
+  "license": "MIT",
+  "keywords": [
+    "workflow",
+    "visualization",
+    "ascii",
+    "documentation",
+    "diagram"
+  ]
+}

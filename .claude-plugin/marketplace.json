@@ -1,0 +1,16 @@
+{
+  "name": "aiunlocked1412",
+  "owner": {
+    "name": "AI UNLOCKED",
+    "email": "contact@aiunlock.co",
+    "url": "https://aiunlock.co"
+  },
+  "plugins": [
+    {
+      "name": "step-box",
+      "source": ".",
+      "description": "Analyze and visualize project workflow steps in ASCII box format",
+      "version": "1.0.0"
+    }
+  ]
+}
